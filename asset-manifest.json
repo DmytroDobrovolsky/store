@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/DmytroDobrovolsky.gihub.io/store/static/css/main.92e7af13.css",
-    "main.js": "/DmytroDobrovolsky.gihub.io/store/static/js/main.16c347d9.js",
-    "static/media/solana.jpg": "/DmytroDobrovolsky.gihub.io/store/static/media/solana.1e581e4853a06907a5f2.jpg",
-    "static/media/639700212.webp": "/DmytroDobrovolsky.gihub.io/store/static/media/639700212.89f8cf96df302e3359f0.webp",
-    "static/media/647020674.webp": "/DmytroDobrovolsky.gihub.io/store/static/media/647020674.b1a8fec5a40d077e5113.webp",
-    "static/media/650910123.webp": "/DmytroDobrovolsky.gihub.io/store/static/media/650910123.fe80117e8b46dd7481c7.webp",
-    "static/media/651248021.webp": "/DmytroDobrovolsky.gihub.io/store/static/media/651248021.eabaeb95883eac8a592b.webp",
-    "static/media/bannerBuyForm.jpg": "/DmytroDobrovolsky.gihub.io/store/static/media/bannerBuyForm.72dd0dde2f8015d0322d.jpg",
-    "static/media/bannerOrderPage.svg": "/DmytroDobrovolsky.gihub.io/store/static/media/bannerOrderPage.839afd8054e11f36b945252a27de6185.svg",
-    "index.html": "/DmytroDobrovolsky.gihub.io/store/index.html",
-    "main.92e7af13.css.map": "/DmytroDobrovolsky.gihub.io/store/static/css/main.92e7af13.css.map",
-    "main.16c347d9.js.map": "/DmytroDobrovolsky.gihub.io/store/static/js/main.16c347d9.js.map"
+    "main.css": "/store/static/css/main.92e7af13.css",
+    "main.js": "/store/static/js/main.35cbccb8.js",
+    "static/media/solana.jpg": "/store/static/media/solana.1e581e4853a06907a5f2.jpg",
+    "static/media/639700212.webp": "/store/static/media/639700212.89f8cf96df302e3359f0.webp",
+    "static/media/647020674.webp": "/store/static/media/647020674.b1a8fec5a40d077e5113.webp",
+    "static/media/650910123.webp": "/store/static/media/650910123.fe80117e8b46dd7481c7.webp",
+    "static/media/651248021.webp": "/store/static/media/651248021.eabaeb95883eac8a592b.webp",
+    "static/media/bannerBuyForm.jpg": "/store/static/media/bannerBuyForm.72dd0dde2f8015d0322d.jpg",
+    "static/media/bannerOrderPage.svg": "/store/static/media/bannerOrderPage.839afd8054e11f36b945252a27de6185.svg",
+    "index.html": "/store/index.html",
+    "main.92e7af13.css.map": "/store/static/css/main.92e7af13.css.map",
+    "main.35cbccb8.js.map": "/store/static/js/main.35cbccb8.js.map"
   },
   "entrypoints": [
     "static/css/main.92e7af13.css",
-    "static/js/main.16c347d9.js"
+    "static/js/main.35cbccb8.js"
   ]
 }
