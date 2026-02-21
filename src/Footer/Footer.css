@@ -2,6 +2,7 @@
   width: 280px;
   min-height: 100vh;
   border: 3px solid silver;
+  border-top: 0;
   position: relative;
   padding-top: 10px;
   margin: 0;

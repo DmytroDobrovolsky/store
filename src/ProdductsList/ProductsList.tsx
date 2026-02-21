@@ -39,8 +39,18 @@ const ProductList = () => {
     boughtProduct.number !== "" &&
     (boughtProduct.payment === "cash" || boughtProduct.payment === "card");
 
+  console.log(buyStatus.value);
+
   return (
-    <div className="productList">
+    <div
+      className="productList"
+      style={{ position: buyStatus.value ? "fixed" : "static" }}
+    >
+      {buyStatus.value && (
+        <div className="productList__background">
+          <button onClick={handleCancelButt} className="productList__background-button"></button>
+        </div>
+      )}
       {buyStatus.value && (
         <div className="productList__buyItem">
           {productForBuy(buyStatus.id, dataToRender).map((product) => (

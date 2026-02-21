@@ -126,29 +126,9 @@ function useProductsList(solanaCourse: solanaCourse) {
       setPaymentStatus((prev) => ({ ...prev, crypto: false }));
       return;
     }
-    setPaymentStatus({
-      isPayment: true,
-      another: true,
-      crypto: true,
-      incognitoCrypto: true,
-    });
-    setBuyStatus({
-      id: 0,
-      value: false,
-    });
+
     dispatch(productOrderSlice(boughtProduct));
-    setBoughtProduct({
-      id: 0,
-      name: "",
-      weight: 0,
-      image: "",
-      model: "",
-      fullName: "",
-      number: "",
-      payment: "",
-      url: "",
-      price: 0,
-    });
+    handleCancelButt()
   };
 
   const handleCancelButt = () => {
@@ -177,6 +157,7 @@ function useProductsList(solanaCourse: solanaCourse) {
       price: 0,
     });
   };
+
 
   const handleProductChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
