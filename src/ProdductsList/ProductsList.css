@@ -35,12 +35,12 @@
   margin-left: 15px;
 }
 
-.productList__item-butt--buy {
-  width: 80px !important;
-  height: 26px !important;
-  font-size: 12px !important;
-  margin-left: 25% !important;
-  margin-bottom: 4px !important;
+.productList__item .button {
+  width: 80px;
+  height: 26px;
+  font-size: 12px;
+  margin-left: 25%;
+  margin-bottom: 4px;
 }
 
 .productList__item-p {
@@ -66,20 +66,19 @@
   text-align: center;
 }
 
-.productList__background{
-width:1150px;
-height: 100%;
-position: fixed;
- z-index: 1;
-display: flex;
-flex-direction: row-reverse;
+.productList__background {
+  width: 1150px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.productList__background-button{
- display: flex;
- width: 200px;
-opacity: 0;
-
+.productList__background-button {
+  display: flex;
+  width: 200px;
+  opacity: 0;
 }
 
 .productList__buyItem {
@@ -196,7 +195,7 @@ opacity: 0;
   display: block;
   width: 300px;
   height: 270px;
-   min-height: 270px;
+  min-height: 270px;
   min-width: 300px;
   margin-left: 40px;
   margin-top: 5px;
@@ -237,10 +236,12 @@ opacity: 0;
   border-radius: 5px;
 }
 
-.productList__buyItem-button {
-  margin-bottom: 7px !important;
-  margin-top: 3px !important;
-  animation: pulse 1.5s infinite !important;
+.productList__buyItem .button {
+  width: 500px;
+  height: 35px;
+  margin-bottom: 7px;
+  margin-top: 3px;
+  animation: pulse 1.5s infinite;
 }
 
 .productList__banner {
@@ -253,25 +254,24 @@ opacity: 0;
 
 .productList__bannerImg {
   width: 900px;
-   min-width: 900px;
- min-height: 150px;
+  min-width: 900px;
+  min-height: 150px;
   border: 1px solid silver;
   border-radius: 3px;
 }
-.productList__banner-butt--next {
-  position: absolute !important;
-  right: -15px !important;
-  bottom: 43.5% !important;
-  z-index: 0 !important;
+.productList__banner .banner-next {
+  position: absolute;
+  right: -15px;
+  bottom: 43.5%;
+  z-index: 0;
 }
 
-.productList__banner-butt--previous {
-  position: absolute !important;
-  left: -17px !important;
-  bottom: 40.5% !important;
-  z-index: 0 !important;
+.productList__banner .banner-previous {
+  position: absolute;
+  left: -17px;
+  bottom: 40.5%;
+  z-index: 0;
 }
-
 
 @keyframes pulse {
   0% {

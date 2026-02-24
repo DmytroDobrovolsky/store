@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { fillteredArrSlice, statusSlice } from "../app/slicers/products";
 import { useNavigate } from "react-router-dom";
 
-function useFooter() {
+function useFiltersBar() {
   const [formData, setFormData] = useState({
     name: "",
     price: "",
@@ -57,6 +57,12 @@ function useFooter() {
   const handleClearbutt = () => {
     dispatch(statusSlice(false));
     resetForm();
+    setFormData({
+      name: "",
+      price: "",
+      weight: 0,
+      delivery: "",
+    });
   };
 
   const handleOrderPageBtn = () => {
@@ -68,7 +74,8 @@ function useFooter() {
     handleConfirmButt,
     handleClearbutt,
     handleOrderPageBtn,
+    formData,
     formRef,
   };
 }
-export default useFooter;
+export default useFiltersBar;

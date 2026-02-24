@@ -128,7 +128,7 @@ function useProductsList(solanaCourse: solanaCourse) {
     }
 
     dispatch(productOrderSlice(boughtProduct));
-    handleCancelButt()
+    handleCancelButt();
   };
 
   const handleCancelButt = () => {
@@ -157,7 +157,6 @@ function useProductsList(solanaCourse: solanaCourse) {
       price: 0,
     });
   };
-
 
   const handleProductChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

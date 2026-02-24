@@ -1,5 +1,5 @@
-import "./Footer.css";
-import useFooter from "./useFooter";
+import "./FiltersBar.css";
+import useFiltersBar from "./useFiltersBar";
 import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
@@ -10,23 +10,24 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import BalanceOutlinedIcon from "@mui/icons-material/BalanceOutlined";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 
-function Footer() {
+function FiltersBar() {
   const {
     handleInputChange,
     handleConfirmButt,
     handleClearbutt,
     handleOrderPageBtn,
+    formData,
     formRef,
-  } = useFooter();
+  } = useFiltersBar();
   return (
     <form
       ref={formRef}
-      className="footer"
+      className="filtersBar"
     >
-      <div className="footer__fixedList">
-        <div className="footer__fixedList-container">
+      <div className="filtersBar__fixedList">
+        <div className="filtersBar__fixedList-container">
           <Button
-            className="footer__fixedList-button"
+            className="filtersBar__fixedList button"
             type="button"
             variant="contained"
             onClick={handleOrderPageBtn}
@@ -34,11 +35,11 @@ function Footer() {
             Orders
             <ShoppingCartIcon
               fontSize="small"
-              className="footer__fixedList-img"
+              className="filtersBar__fixedList-img"
             />
           </Button>
           <Button
-            className="footer__fixedList-button"
+            className="filtersBar__fixedList button"
             variant="contained"
             type="button"
             onClick={handleConfirmButt}
@@ -46,11 +47,11 @@ function Footer() {
             Search
             <SearchOutlinedIcon
               fontSize="small"
-              className="footer__fixedList-img"
+              className="filtersBar__fixedList-img"
             />
           </Button>
           <Button
-            className="footer__fixedList-button"
+            className="filtersBar__fixedList button"
             variant="contained"
             type="button"
             onClick={handleClearbutt}
@@ -58,156 +59,167 @@ function Footer() {
             Clear
             <DeleteOutlinedIcon
               fontSize="small"
-              className="footer__fixedList-img"
+              className="filtersBar__fixedList-img"
             />
           </Button>
         </div>
-        <h2 className="footer__input-title">
+        <h2 className="filtersBar__input-title">
           Select product
-          <CategoryOutlinedIcon className="footer__input-picture" />
+          <CategoryOutlinedIcon className="filtersBar__input-picture" />
         </h2>
-        <div className="footer__option">
-          <label className="footer__input-label">
+        <div className="filtersBar__option">
+          <label className="filtersBar__input-label">
             Mobile
             <input
               name="name"
               value="Mobile"
+              checked={formData.name === "Mobile"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             Laptop
             <input
               name="name"
               value="Laptop"
+              checked={formData.name === "Laptop"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             PC
             <input
               name="name"
               value="PC"
+              checked={formData.name === "PC"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             Mouse
             <input
               name="name"
               value="Mouse"
+              checked={formData.name === "Mouse"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
         </div>
-        <h2 className="footer__input-title">
+        <h2 className="filtersBar__input-title">
           Select price range
-          <LocalOfferOutlinedIcon className="footer__input-picture" />
+          <LocalOfferOutlinedIcon className="filtersBar__input-picture" />
         </h2>
-        <div className="footer__option">
-          <label className="footer__input-label">
+        <div className="filtersBar__option">
+          <label className="filtersBar__input-label">
             From 1500 to 3500
             <input
               value="From 1500 to 3500 USD"
               name="price"
+              checked={formData.price === "From 1500 to 3500 USD"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             From 3500 to 5500
             <input
-              value="From 3500 to 5500 USD"
               name="price"
+              value="From 3500 to 5500 USD"
+              checked={formData.price === "From 3500 to 5500 USD"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             More than 5500
             <input
-              value="More than 5500 USD"
               name="price"
+              value="More than 5500 USD"
+              checked={formData.price === "More than 5500 USD"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
         </div>
-        <h2 className="footer__input-title">
+        <h2 className="filtersBar__input-title">
           Select delivery type
-          <LocalShippingOutlinedIcon className="footer__input-picture" />
+          <LocalShippingOutlinedIcon className="filtersBar__input-picture" />
         </h2>
-        <div className="footer__option">
-          <label className="footer__input-label">
+        <div className="filtersBar__option">
+          <label className="filtersBar__input-label">
             Free delivery
             <input
               value="Free Delivery"
               name="delivery"
+              checked={formData.delivery === "Free Delivery"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             Paid delivery
             <input
               value="Paid Delivery"
               name="delivery"
+              checked={formData.delivery === "Paid Delivery"}
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
         </div>
-        <h2 className="footer__input-title">
+        <h2 className="filtersBar__input-title">
           Select weight
-          <BalanceOutlinedIcon className="footer__input-picture" />
+          <BalanceOutlinedIcon className="filtersBar__input-picture" />
         </h2>
-        <div className="footer__option">
-          <label className="footer__input-label">
+        <div className="filtersBar__option">
+          <label className="filtersBar__input-label">
             2.5 kg
             <input
               value="2.5"
+              checked={formData.weight === 2.5}
               name="weight"
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
-          <label className="footer__input-label">
+          <label className="filtersBar__input-label">
             2.9 kg
             <input
               value="2.9"
+                 checked={formData.weight === 2.9 }
               name="weight"
               onChange={handleInputChange}
               type="radio"
-              className="footer__input"
+              className="filtersBar__input"
             />
           </label>
         </div>
-        <h2 className="footer__input-title">
+        <h2 className="filtersBar__input-title">
           Our social media
           <a
-            className="footer__input-link"
+            className="filtersBar__input-link"
             href="https://www.linkedin.com/in/dmytro-dobrovolsky-0028a83a6/"
           >
-            <FacebookOutlinedIcon className="footer__input-picture" />
+            <FacebookOutlinedIcon className="filtersBar__input-picture" />
           </a>
         </h2>
-        <div className="footer__option"></div>
+        <div className="filtersBar__option"></div>
       </div>
     </form>
   );
 }
-export default Footer;
+export default FiltersBar;

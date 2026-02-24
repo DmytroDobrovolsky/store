@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slicers/products";
+import productReducer from "./slicers/products";
 
 export const store = configureStore({
-  reducer: { products: counterReducer },
+  reducer: { products: productReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

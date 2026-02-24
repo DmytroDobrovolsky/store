@@ -20,7 +20,7 @@ const OrderPage = () => {
         <Button
           variant="contained"
           color="success"
-          className="order__store-button"
+          className="order__store button"
           type="button"
           onClick={handleChangePage}
         >

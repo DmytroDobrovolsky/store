@@ -39,8 +39,6 @@ const ProductList = () => {
     boughtProduct.number !== "" &&
     (boughtProduct.payment === "cash" || boughtProduct.payment === "card");
 
-  console.log(buyStatus.value);
-
   return (
     <div
       className="productList"
@@ -48,7 +46,10 @@ const ProductList = () => {
     >
       {buyStatus.value && (
         <div className="productList__background">
-          <button onClick={handleCancelButt} className="productList__background-button"></button>
+          <button
+            onClick={handleCancelButt}
+            className="productList__background-button"
+          ></button>
         </div>
       )}
       {buyStatus.value && (
@@ -217,7 +218,7 @@ const ProductList = () => {
             <Button
               variant="contained"
               color="success"
-              className="productList__buyItem-button"
+              className="productList__buyItem button"
               type="button"
               onClick={handleProductBuyButt}
             >
@@ -241,7 +242,7 @@ const ProductList = () => {
         />
         <Fab
           size="small"
-          className="productList__banner-butt--next"
+          className=".productList__banner banner-next"
           type="button"
           onClick={handelNextBannerButt}
         >
@@ -249,7 +250,7 @@ const ProductList = () => {
         </Fab>
         <Fab
           size="small"
-          className="productList__banner-butt--previous"
+          className=".productList__banner banner-previous"
           type="button"
           onClick={handelPreviousBannerButt}
         >
@@ -280,7 +281,7 @@ const ProductList = () => {
             <Button
               variant="contained"
               color="success"
-              className="productList__item-butt--buy"
+              className="productList__item button"
               type="button"
               onClick={() => handleProductListBuyButt(product)}
             >
