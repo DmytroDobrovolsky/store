@@ -1,6 +1,6 @@
 import "./App.css";
 import HomePage from "./HomePage/HomePage";
-import Footer from "./FiltersBar/FiltersBar";
+import FiltersBar from "./FiltersBar/FiltersBar";
 import OrderPage from "./OrderPage/OrderPage";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function App() {
             path="/"
             element={
               <>
-                <Footer />
+                <FiltersBar />
                 <HomePage />
               </>
             }
